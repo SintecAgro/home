@@ -43,23 +43,6 @@
         html {
             scroll-behavior: smooth;
         }
-        /* Estilo para o resultado da IA */
-        #ia-result {
-            white-space: pre-wrap;
-        }
-        /* Animação de carregamento */
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #22C55E; /* green-500 */
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -77,7 +60,6 @@
                 <a href="#quemsomos" class="text-gray-600 hover:text-green-600 transition-colors">Quem Somos</a>
                 <a href="#solucoes" class="text-gray-600 hover:text-green-600 transition-colors">Soluções</a>
                 <a href="#diferenciais" class="text-gray-600 hover:text-green-600 transition-colors">Diferenciais</a>
-                <a href="#calculadora-ia" class="text-gray-600 hover:text-green-600 transition-colors">Calculadora ROI ✨</a>
                 <a href="#parcerias" class="text-gray-600 hover:text-green-600 transition-colors">Parcerias</a>
                 <a href="#contato" class="bg-yellow-400 text-gray-900 px-5 py-2 rounded-full hover:bg-yellow-500 transition-colors shadow-md">Contato</a>
             </div>
@@ -92,7 +74,6 @@
             <a href="#quemsomos" class="block py-2 px-4 text-sm hover:bg-gray-200">Quem Somos</a>
             <a href="#solucoes" class="block py-2 px-4 text-sm hover:bg-gray-200">Soluções</a>
             <a href="#diferenciais" class="block py-2 px-4 text-sm hover:bg-gray-200">Diferenciais</a>
-            <a href="#calculadora-ia" class="block py-2 px-4 text-sm hover:bg-gray-200">Calculadora ROI ✨</a>
             <a href="#parcerias" class="block py-2 px-4 text-sm hover:bg-gray-200">Parcerias</a>
             <a href="#contato" class="block py-2 px-4 text-sm bg-yellow-400 hover:bg-yellow-500">Contato</a>
         </div>
@@ -239,54 +220,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- NOVA SEÇÃO: Calculadora de ROI com IA -->
-        <section id="calculadora-ia" class="py-20 bg-gray-100">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="section-title">Calculadora de ROI Potencial <span class="text-yellow-400">✨</span></h2>
-                <p class="section-subtitle">
-                    Descubra como a automação pode impactar seus resultados. Preencha os campos abaixo e deixe nossa inteligência artificial criar uma análise preliminar para sua fazenda.
-                </p>
-                <div class="mt-12 max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="cultura" class="block text-left font-semibold text-gray-700 mb-2">Principal Cultura</label>
-                            <input type="text" id="cultura" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Ex: Soja, Milho, Algodão">
-                        </div>
-                        <div>
-                            <label for="area" class="block text-left font-semibold text-gray-700 mb-2">Área Plantada (Hectares)</label>
-                            <input type="number" id="area" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Ex: 1500">
-                        </div>
-                        <div class="md:col-span-2">
-                            <label for="desafio" class="block text-left font-semibold text-gray-700 mb-2">Seu Principal Desafio Hoje</label>
-                            <textarea id="desafio" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Ex: Perda de grãos na secagem, alto custo de energia, dificuldade com mão de obra na expedição..."></textarea>
-                        </div>
-                    </div>
-                    <button id="calculate-roi-btn" class="mt-8 w-full md:w-auto bg-green-600 text-white font-bold py-4 px-12 rounded-full text-lg hover:bg-green-700 transition-transform transform hover:scale-105 shadow-lg flex items-center justify-center mx-auto">
-                        <span class="mr-2">✨</span> Calcular Potencial de Retorno com IA
-                    </button>
-
-                    <!-- Área de Resultado -->
-                    <div id="ia-result-container" class="mt-10 text-left hidden">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-yellow-400 pb-2">Análise Preliminar de Potencial</h3>
-                        <div id="ia-result" class="text-gray-700 leading-relaxed bg-gray-50 p-6 rounded-lg">
-                            <!-- O resultado da IA será inserido aqui -->
-                        </div>
-                        <p class="text-sm text-gray-500 mt-4 italic">Esta é uma estimativa gerada por IA. Para um projeto detalhado e preciso, <a href="#contato" class="text-green-600 font-semibold underline">entre em contato com nossos especialistas</a>.</p>
-                    </div>
-
-                    <!-- Indicador de Carregamento -->
-                    <div id="loader-container" class="mt-10 hidden flex-col items-center justify-center">
-                        <div class="loader"></div>
-                        <p class="text-gray-600 mt-4 font-semibold">Analisando dados e consultando nosso especialista digital... Por favor, aguarde.</p>
-                    </div>
-                     <!-- Mensagem de Erro -->
-                    <div id="error-message" class="mt-8 hidden text-red-600 bg-red-100 p-4 rounded-lg">
-                        <!-- Mensagem de erro será inserida aqui -->
-                    </div>
-                </div>
-            </div>
-        </section>
         
         <!-- NOVA SEÇÃO: Parcerias -->
         <section id="parcerias" class="py-20 bg-white">
@@ -367,107 +300,6 @@
 
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-        });
-
-        // --- LÓGICA DA CALCULADORA DE ROI COM GEMINI API ---
-
-        const calculateBtn = document.getElementById('calculate-roi-btn');
-        const loader = document.getElementById('loader-container');
-        const resultContainer = document.getElementById('ia-result-container');
-        const resultDiv = document.getElementById('ia-result');
-        const errorMessageDiv = document.getElementById('error-message');
-
-        calculateBtn.addEventListener('click', async () => {
-            // 1. Coletar dados do formulário
-            const cultura = document.getElementById('cultura').value;
-            const area = document.getElementById('area').value;
-            const desafio = document.getElementById('desafio').value;
-
-            // Validação simples
-            if (!cultura || !area || !desafio) {
-                errorMessageDiv.textContent = 'Por favor, preencha todos os campos para a análise.';
-                errorMessageDiv.classList.remove('hidden');
-                return;
-            }
-
-            // 2. Preparar UI para carregamento
-            errorMessageDiv.classList.add('hidden');
-            resultContainer.classList.add('hidden');
-            loader.style.display = 'flex'; // Usar 'flex' por causa do estilo
-            calculateBtn.disabled = true;
-            calculateBtn.classList.add('opacity-50', 'cursor-not-allowed');
-
-            // 3. Construir o prompt para a API Gemini
-            const prompt = `
-                Você é um consultor especialista em automação agrícola da Sintec Agro Automação, uma empresa líder sediada em Sinop, Mato Grosso.
-                Um potencial cliente forneceu as seguintes informações sobre sua operação:
-                - Cultura Principal: ${cultura}
-                - Área Plantada: ${area} hectares
-                - Principal Desafio Atual: "${desafio}"
-
-                Com base nesses dados, gere uma análise preliminar e otimista do potencial de retorno sobre o investimento (ROI) ao implementar as soluções de automação da Sintec. Sua resposta deve ser estruturada profissionalmente em seções claras, usando Markdown para formatação (negrito para títulos). Responda em Português do Brasil.
-
-                A estrutura deve ser:
-
-                **Solução Sintec Recomendada:**
-                Sugira brevemente qual serviço da Sintec (ex: Automação de Armazenagem, Modernização de Planta, Automação de Irrigação) é mais relevante para o desafio do cliente e explique o porquê em uma ou duas frases.
-
-                **Potencial de Redução de Perdas:**
-                Estime um percentual conservador de redução de perdas de grãos ou insumos que a automação pode proporcionar (ex: melhor controle de secagem, aeração, termometria, ou uso preciso de fertilizantes).
-
-                **Potencial de Eficiência Energética e Operacional:**
-                Descreva como a automação pode gerar economia de energia elétrica (ex: acionamento inteligente de motores e aeradores) e otimizar o uso de mão de obra, liberando a equipe para tarefas mais estratégicas.
-
-                **Resumo do Potencial de ROI:**
-                Conclua com um parágrafo curto e encorajador, reforçando que o investimento em tecnologia se traduz em maior lucratividade e segurança para o negócio.
-            `;
-
-            // 4. Fazer a chamada para a API Gemini
-            try {
-                const apiKey = ""; // O ambiente do Canvas irá injetar a chave aqui
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
-
-                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-                const payload = { contents: chatHistory };
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                if (!response.ok) {
-                    throw new Error(`Erro na API: ${response.statusText}`);
-                }
-
-                const data = await response.json();
-                
-                if (data.candidates && data.candidates.length > 0 &&
-                    data.candidates[0].content && data.candidates[0].content.parts &&
-                    data.candidates[0].content.parts.length > 0) {
-                    
-                    const text = data.candidates[0].content.parts[0].text;
-                    
-                    // 5. Exibir o resultado
-                    // Substituir markdown simples por HTML
-                    let htmlResult = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900">$1</strong>');
-                    resultDiv.innerHTML = htmlResult;
-                    resultContainer.classList.remove('hidden');
-
-                } else {
-                     throw new Error("A resposta da IA não continha o conteúdo esperado.");
-                }
-
-            } catch (error) {
-                console.error("Erro ao chamar a API Gemini:", error);
-                errorMessageDiv.textContent = 'Ocorreu um erro ao consultar nosso especialista digital. Por favor, tente novamente mais tarde ou entre em contato conosco diretamente.';
-                errorMessageDiv.classList.remove('hidden');
-            } finally {
-                // 6. Limpar UI do carregamento
-                loader.style.display = 'none';
-                calculateBtn.disabled = false;
-                calculateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-            }
         });
     </script>
 </body>
